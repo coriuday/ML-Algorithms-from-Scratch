@@ -293,7 +293,7 @@ def roc_curve(y_true, y_scores):
 def roc_auc_score(y_true, y_scores):
     """Computes the Area Under the ROC Curve."""
     fpr, tpr = roc_curve(y_true, y_scores)
-    return np.trapz(tpr, fpr)
+    return np.trapezoid(tpr, fpr)
 
 def learning_curve(model, X, y, train_sizes=np.linspace(0.1, 1.0, 5)):
     """Generates the data for a learning curve."""

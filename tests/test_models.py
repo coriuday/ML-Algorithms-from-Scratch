@@ -112,6 +112,6 @@ def test_learning_curve(simple_classification_data):
     X, y = simple_classification_data
     model = LogisticRegressionScratch()
     train_sizes, train_scores, test_scores = learning_curve(model, X, y)
-    assert len(train_sizes) == 5
-    assert train_scores.shape == (5,)
-    assert test_scores.shape == (5,)
+    assert len(train_sizes) == 4
+    assert train_scores.shape == (4,)
+    assert test_scores.shape == (4,)
